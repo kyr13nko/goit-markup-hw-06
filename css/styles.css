@@ -1,3 +1,5 @@
+/* #region STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 :root {
   --iris: #4d5ae5;
   --ocean: #404bbf;
@@ -44,16 +46,17 @@ img {
   height: auto;
 }
 
-button {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-}
-
 address {
   font-style: normal;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -78,12 +81,10 @@ address {
   margin: 0 auto;
 }
 
-.link {
-  text-decoration: none;
-}
-
-.list {
-  list-style: none;
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .heading {
@@ -123,7 +124,9 @@ address {
   margin-top: 8px;
 }
 
-/** +++ HEADER +++++++++++++++++++++++++++++++++++++++ **/
+/* #endregion STYLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .header-page {
   background-color: var(--white);
@@ -235,9 +238,11 @@ address {
   color: var(--ocean);
 }
 
-/** +++ STUDIO MAIN +++++++++++++++++++++++++++++++++++++++ **/
+/* #endregion HEADER ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/** === STUDIO SECTION HERO ======================================= **/
+/* #region STUDIO MAIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region STUDIO SECTION HERO =========================================== */
 
 .hero-section {
   width: 1440px;
@@ -245,7 +250,10 @@ address {
 
   background-color: var(--navy-blue);
 
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -276,7 +284,9 @@ address {
   background: var(--ocean);
 }
 
-/** === STUDIO SECTION COMPONENTS ======================================= **/
+/* #endregion STUDIO SECTION HERO =========================================== */
+
+/* #region STUDIO SECTION COMPONENTS ======================================= */
 
 .components-section {
   padding-top: 120px;
@@ -313,7 +323,9 @@ address {
   height: 64px;
 }
 
-/** === STUDIO SECTION WORKS ======================================= **/
+/* #endregion STUDIO SECTION COMPONENTS ======================================= */
+
+/* #region STUDIO SECTION WORKS ============================================ */
 
 .works-list {
   display: flex;
@@ -329,7 +341,9 @@ address {
   margin-left: 24px;
 }
 
-/** === STUDIO SECTION OUR TEAM ======================================= **/
+/* #endregion STUDIO SECTION WORKS ============================================ */
+
+/* #region STUDIO SECTION OUR TEAM ========================================== */
 
 .team-section {
   background-color: var(--cloud);
@@ -348,8 +362,8 @@ address {
   background-color: var(--white);
   flex-basis: calc(100% / 4 - 24px);
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   margin-left: 24px;
@@ -391,7 +405,9 @@ address {
   fill: var(--white);
 }
 
-/** === STUDIO SECTION CUSTOMERS ======================================= **/
+/* #endregion STUDIO SECTION OUR TEAM ========================================== */
+
+/* #region STUDIO SECTION CUSTOMERS ======================================= */
 
 .customers-section {
   padding-top: 120px;
@@ -421,7 +437,8 @@ address {
   width: 168px;
   height: 88px;
 
-  transition: border var(--transition-hover-focus), color var(--transition-hover-focus);
+  transition: border var(--transition-hover-focus),
+    color var(--transition-hover-focus);
 }
 
 .customers-link:hover,
@@ -436,9 +453,13 @@ address {
   fill: currentColor;
 }
 
-/** +++ PORTFOLIO SECTION +++++++++++++++++++++++++++++++++++++++ **/
+/* #endregion STUDIO SECTION CUSTOMERS ======================================= */
 
-/** === PORTFOLIO BUTTONS ======================================= **/
+/* #endregion STUDIO MAIN ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region PORTFOLIO MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region PORTFOLIO BUTTONS ===================================================== */
 
 .portfolio-btn-list {
   display: flex;
@@ -462,7 +483,8 @@ address {
   border-radius: 4px;
   padding: 12px 24px;
 
-  transition: color var(--transition-hover-focus), background-color var(--transition-hover-focus),
+  transition: color var(--transition-hover-focus),
+    background-color var(--transition-hover-focus),
     box-shadow var(--transition-hover-focus);
 }
 
@@ -478,7 +500,9 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-/** === PORTFOLIO GALLERY ======================================= **/
+/* #endregion PORTFOLIO BUTTONS ===================================================== */
+
+/* #region PORTFOLIO GALLERY ==================================================== */
 
 .portfolio-section {
   padding-top: 96px;
@@ -507,8 +531,8 @@ address {
 }
 
 .portfolio-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-overlay {
@@ -551,7 +575,11 @@ address {
   padding: 32px 16px;
 }
 
-/** +++ FOOTER +++++++++++++++++++++++++++++++++++++++ **/
+/* #endregion PORTFOLIO GALLERY ==================================================== */
+
+/* #endregion PORTFOLIO MAIN +++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .footer-page {
   background-color: var(--navy-blue-modal);
@@ -629,7 +657,9 @@ address {
   fill: var(--white);
 }
 
-/** === MODAL WINDOW ================================================ **/
+/* #endregion FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region MODAL WINDOW ======================================================= */
 
 .backdrop {
   position: fixed;
@@ -642,7 +672,8 @@ address {
 
   background: rgba(46, 47, 66, 0.4);
 
-  transition: opacity var(--transition-hover-focus), visibility var(--transition-hover-focus);
+  transition: opacity var(--transition-hover-focus),
+    visibility var(--transition-hover-focus);
 }
 
 .backdrop.is-hidden {
@@ -706,3 +737,5 @@ address {
 .modal-close-btn:focus .modal-close-icon {
   fill: var(--white);
 }
+
+/* #endregion MODAL WINDOW ======================================================= */
