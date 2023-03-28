@@ -250,10 +250,7 @@ address {
 
   background-color: var(--navy-blue);
 
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -267,7 +264,7 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  background: var(--iris);
+  background-color: var(--iris);
   color: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
@@ -276,12 +273,12 @@ address {
   padding: 16px 32px;
   margin-top: 48px;
 
-  transition: background var(--transition-hover-focus);
+  transition: background-color var(--transition-hover-focus);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background: var(--ocean);
+  background-color: var(--ocean);
 }
 
 /* #endregion STUDIO SECTION HERO =========================================== */
@@ -362,8 +359,8 @@ address {
   background-color: var(--white);
   flex-basis: calc(100% / 4 - 24px);
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   margin-left: 24px;
@@ -437,8 +434,7 @@ address {
   width: 168px;
   height: 88px;
 
-  transition: border var(--transition-hover-focus),
-    color var(--transition-hover-focus);
+  transition: border var(--transition-hover-focus), color var(--transition-hover-focus);
 }
 
 .customers-link:hover,
@@ -483,8 +479,7 @@ address {
   border-radius: 4px;
   padding: 12px 24px;
 
-  transition: color var(--transition-hover-focus),
-    background-color var(--transition-hover-focus),
+  transition: color var(--transition-hover-focus), background-color var(--transition-hover-focus),
     box-shadow var(--transition-hover-focus);
 }
 
@@ -531,8 +526,8 @@ address {
 }
 
 .portfolio-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-overlay {
@@ -590,13 +585,15 @@ address {
 
 .footer-container {
   display: flex;
-  gap: 120px;
+  /* gap: 120px; */
 }
 
 /** === FOOTER CONTENT ======================================= **/
 
 .footer-content {
   width: 264px;
+
+  margin-right: 120px;
 }
 
 .logo-link-footer {
@@ -616,6 +613,8 @@ address {
 
 .footer-contacts {
   width: 208px;
+
+  margin-right: 80px;
 }
 
 .footer-title {
@@ -624,12 +623,13 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white);
+
+  margin-bottom: 16px;
 }
 
 .footer-list {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
 }
 
 .footer-link {
@@ -637,7 +637,7 @@ address {
   justify-content: center;
   align-items: center;
 
-  background-color: var(--slate);
+  background-color: var(--iris);
   border-radius: 50%;
 
   width: 40px;
@@ -652,6 +652,67 @@ address {
 }
 
 .footer-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
+}
+
+/** FOOTER SUBSCRIBE ============================================== **/
+
+.footer-subscribe {
+  width: 453px;
+}
+
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-form-input {
+  width: 264px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+
+  background-color: inherit;
+  color: var(--white);
+
+  border: 1px solid var(--white);
+  border-radius: 4px;
+
+  padding: 8px 16px;
+}
+
+.footer-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  background-color: var(--iris);
+  color: var(--white);
+  border-radius: 4px;
+  border: none;
+
+  padding: 8px 24px;
+
+  transition: background-color var(--transition-hover-focus);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: var(--ocean);
+}
+
+.footer-form-btn-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.footer-form-btn-icon {
   width: 24px;
   height: 24px;
   fill: var(--white);
@@ -672,8 +733,7 @@ address {
 
   background: rgba(46, 47, 66, 0.4);
 
-  transition: opacity var(--transition-hover-focus),
-    visibility var(--transition-hover-focus);
+  transition: opacity var(--transition-hover-focus), visibility var(--transition-hover-focus);
 }
 
 .backdrop.is-hidden {
