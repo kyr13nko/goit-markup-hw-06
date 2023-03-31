@@ -250,7 +250,10 @@ address {
 
   background-color: var(--navy-blue);
 
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -359,8 +362,8 @@ address {
   background-color: var(--white);
   flex-basis: calc(100% / 4 - 24px);
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   margin-left: 24px;
@@ -434,7 +437,8 @@ address {
   width: 168px;
   height: 88px;
 
-  transition: border var(--transition-hover-focus), color var(--transition-hover-focus);
+  transition: border var(--transition-hover-focus),
+    color var(--transition-hover-focus);
 }
 
 .customers-link:hover,
@@ -479,7 +483,8 @@ address {
   border-radius: 4px;
   padding: 12px 24px;
 
-  transition: color var(--transition-hover-focus), background-color var(--transition-hover-focus),
+  transition: color var(--transition-hover-focus),
+    background-color var(--transition-hover-focus),
     box-shadow var(--transition-hover-focus);
 }
 
@@ -526,8 +531,8 @@ address {
 }
 
 .portfolio-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-overlay {
@@ -676,13 +681,15 @@ address {
   font-size: 12px;
   line-height: 2;
 
-  background-color: inherit;
+  background-color: transparent;
   color: var(--white);
 
   border: 1px solid var(--white);
   border-radius: 4px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
 
   padding: 8px 16px;
 }
@@ -744,7 +751,8 @@ address {
 
   background: rgba(46, 47, 66, 0.4);
 
-  transition: opacity var(--transition-hover-focus), visibility var(--transition-hover-focus);
+  transition: opacity var(--transition-hover-focus),
+    visibility var(--transition-hover-focus);
 }
 
 .backdrop.is-hidden {
@@ -847,6 +855,11 @@ address {
   margin-bottom: 4px;
 }
 
+.modal-form-input-wrap {
+  display: block;
+  position: relative;
+}
+
 .modal-form-input {
   width: 100%;
   height: 40px;
@@ -854,12 +867,31 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
-  color: var(--navy-blue);
+  color: var(--navy-blue-modal);
 
   padding-left: 42px;
+
+  transition: borber-color var(--transition-hover-focus);
+}
+
+.modal-form-input:focus {
+  border-color: var(--iris);
+  outline: none;
 }
 
 .modal-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+
+  fill: var(--navy-blue-modal);
+
+  transition: fill var(--transition-hover-focus);
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--ocean);
 }
 
 .modal-form-message {
@@ -867,15 +899,98 @@ address {
   height: 120px;
   resize: none;
 
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  color: var(--navy-blue-modal);
+
   padding: 8px 16px;
+
+  transition: borber-color var(--transition-hover-focus);
+}
+
+.modal-form-message:focus {
+  border-color: var(--iris);
+  outline: none;
+}
+
+.modal-form-message::placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-form-check {
 }
 
 .modal-form-check-desc {
+  display: flex;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
+
+.modal-form-check-desc::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  margin-right: 8px;
+
+  cursor: pointer;
+
+  transition: background-color var(--transition-hover-focus),
+    background-image var(--transition-hover-focus),
+    border-color var(--transition-hover-focus);
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-color: var(--ocean);
+
+  background-image: url(../images/modal-vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.modal-form-check:focus + .modal-form-check-desc::before {
+  border-color: var(--ocean);
+}
+
 .modal-form-btn {
+  align-self: center;
+
+  min-width: 169px;
+  min-height: 56px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  background-color: var(--iris);
+  color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  padding: 16px 32px;
+  margin-top: 24px;
+
+  transition: background-color var(--transition-hover-focus);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: var(--ocean);
 }
 
 /* #endregion MODAL FORM ============================================== */
