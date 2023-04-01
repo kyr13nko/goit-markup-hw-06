@@ -250,10 +250,7 @@ address {
 
   background-color: var(--navy-blue);
 
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -362,8 +359,8 @@ address {
   background-color: var(--white);
   flex-basis: calc(100% / 4 - 24px);
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   margin-left: 24px;
@@ -437,8 +434,7 @@ address {
   width: 168px;
   height: 88px;
 
-  transition: border var(--transition-hover-focus),
-    color var(--transition-hover-focus);
+  transition: border var(--transition-hover-focus), color var(--transition-hover-focus);
 }
 
 .customers-link:hover,
@@ -483,8 +479,7 @@ address {
   border-radius: 4px;
   padding: 12px 24px;
 
-  transition: color var(--transition-hover-focus),
-    background-color var(--transition-hover-focus),
+  transition: color var(--transition-hover-focus), background-color var(--transition-hover-focus),
     box-shadow var(--transition-hover-focus);
 }
 
@@ -531,8 +526,8 @@ address {
 }
 
 .portfolio-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-overlay {
@@ -749,10 +744,9 @@ address {
   width: 100%;
   height: 100%;
 
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
 
-  transition: opacity var(--transition-hover-focus),
-    visibility var(--transition-hover-focus);
+  transition: opacity var(--transition-hover-focus), visibility var(--transition-hover-focus);
 }
 
 .backdrop.is-hidden {
@@ -793,9 +787,9 @@ address {
 
   background: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
-
   border-radius: 50%;
 
+  cursor: pointer;
   transition: background var(--transition-hover-focus);
 }
 
@@ -867,6 +861,7 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
+  background-color: transparent;
   color: var(--navy-blue-modal);
 
   padding-left: 42px;
@@ -906,6 +901,7 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
+  background-color: transparent;
   color: var(--navy-blue-modal);
 
   padding: 8px 16px;
@@ -920,9 +916,6 @@ address {
 
 .modal-form-message::placeholder {
   color: rgba(46, 47, 66, 0.4);
-}
-
-.modal-form-check {
 }
 
 .modal-form-check-desc {
@@ -944,13 +937,14 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
 
+  /* background-color: transparent; */
+
   margin-right: 8px;
 
   cursor: pointer;
 
   transition: background-color var(--transition-hover-focus),
-    background-image var(--transition-hover-focus),
-    border-color var(--transition-hover-focus);
+    background-image var(--transition-hover-focus), border-color var(--transition-hover-focus);
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
@@ -964,6 +958,12 @@ address {
 
 .modal-form-check:focus + .modal-form-check-desc::before {
   border-color: var(--ocean);
+}
+
+.modal-form-check-desc-link {
+  line-height: 1.33;
+
+  color: var(--iris);
 }
 
 .modal-form-btn {
